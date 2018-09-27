@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" href="resolution.css">
+	<script src="js/jquery.js"></script>
+
+</head>
+<body>
+    <div id="resolution">
+	    <img class="r-title" src="image/r_title.gif">
+	    <img class="r r1" src="image/r1.gif">
+	    <img class="r r2 "src="image/r2.gif" >
+	    <img class="r r3" src="image/r3.gif">
+	    <img class="r r4" src="image/r4.gif">
+	    <img class="r r5" src="image/r5.gif">
+	    <img class="r r6" src="image/r6.gif">
+	     <div class="guide"></div>
+	    <div class="menu"></div>
+		<div class="shadow"></div>
+		
+		 <div class="back"></div>
+	    <div class="guide-content">
+		    <ul>
+			    <li> <div class="icon icon1"> </div> <span class="font font1">首页    </span></li>
+			    <li> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
+			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
+			    <li> <div class="icon icon4"> </div> <span class="font font4">联系我们   </span></li>
+			
+						
+			</ul>
+		<div class="menu1"></div>
+	</div>
+<script>
+  $('.back').click(function(){
+	     window.location.href="index.html";
+	});
+	$('.guide-content ul').on('click','li',function(e){
+	   var index=$(this).index();
+	   for(var i =0;i<4;i++){
+	       if(i==index){
+		   
+		        $('.font').eq(i).css("color","#a42527");
+				$('.icon').eq(i).css("background-image","url('image/icon"+(1+i)+".gif')");
+		   }
+		   else{
+		       $('.font').eq(i).css("color","black");
+			   $('.icon').eq(i).css("background-image","url('image/icon"+(11+i)+".gif')");
+		  
+		   }
+	   
+	   }
+	   
+	});
+	$('.menu').click(function(){
+	   
+	         if($('.guide-content').css('display')=='block'){
+			 			
+		 $('.guide-content').toggle();
+		 $('.shadow').toggle();
+			 }else{
+			      $('.guide-content').toggle();
+			      $('.shadow').toggle();
+			 }
+		 
+	});
+	
+	    $('.shadow').click(function(){
+		     $('.guide-content').hide();
+			 $('.shadow').hide();
+		
+		});
+$('.guide-content ul').on('click','li',function(e){
+	    var index=$(this).index();
+		if(index==1){
+		    window.location.href="resolution.html";
+		}
+		if(index==0){
+		    window.location.href="home.html";
+		}
+	});
+
+</script>
+</body>
+</html>
