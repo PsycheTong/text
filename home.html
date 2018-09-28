@@ -26,9 +26,9 @@
 		  padding:0px 40px;
 		 letter-spacing:5pt;
 	   }
-	    span{
+	    p span{
 		 color:#8e1315;
-		 font-weight:thicker;
+		 font-weight:thick;
 	    }
 	   h1{
 	   margin-top:30px;
@@ -143,6 +143,12 @@ opacity:0.6;
 	
     color:#a42527;
 }
+.icon0
+{
+    background-image:url('image/icon10.gif');
+
+}
+
 .icon1{
 
 	background-image:url('image/icon1.gif');
@@ -220,7 +226,8 @@ opacity:0.6;
 		
 	    <div class="guide-content">
 		    <ul>
-			    <li> <div class="icon icon1"> </div> <span class="font font1">首页    </span></li>
+			  <li> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
+			    <li> <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
 			    <li> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
 			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
 			    <li> <div class="icon icon4"> </div> <span class="font font4">联系我们   </span></li>
@@ -236,15 +243,25 @@ opacity:0.6;
 	});
 	$('.guide-content ul').on('click','li',function(e){
 	   var index=$(this).index();
-	   for(var i =0;i<4;i++){
+	 for(var i =0;i<5;i++){
 	       if(i==index){
 		   
 		        $('.font').eq(i).css("color","#a42527");
-				$('.icon').eq(i).css("background-image","url('image/icon"+(1+i)+".gif')");
-		   }
+				$('.icon').eq(i).css("background-image","url('image/icon"+(i)+".gif')");
+		        if(index==1){
+		        window.location.href="home.html";
+		}
+		if(index==2){
+		    window.location.href="resolution.html";
+		}
+		if(index==0){
+		   $('.guide-content').hide();
+			 $('.shadow').hide();
+		}
+		  }
 		   else{
 		       $('.font').eq(i).css("color","black");
-			   $('.icon').eq(i).css("background-image","url('image/icon"+(11+i)+".gif')");
+			   $('.icon').eq(i).css("background-image","url('image/icon"+(10+i)+".gif')");
 		  
 		   }
 	   
@@ -271,11 +288,14 @@ opacity:0.6;
 		});
 $('.guide-content ul').on('click','li',function(e){
 	    var index=$(this).index();
-		if(index==1){
+		if(index==2){
+		    window.location.href="home.html";
+		}
+		if(index==2){
 		    window.location.href="resolution.html";
 		}
 		if(index==0){
-		    window.location.href="home.html";
+		    window.location.href="index.html";
 		}
 	});
 </script>
