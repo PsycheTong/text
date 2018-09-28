@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<title></title>
+	<title>解决方案</title>
     <link rel="stylesheet" href="resolution.css">
 	<script src="js/jquery.js"></script>
 
@@ -25,7 +25,7 @@
 		    <ul>
 			     <li> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
 			    <li> <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
-			    <li> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
+			    <li class="forli"> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
 			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
 			    <li> <div class="icon icon4"> </div> <span class="font font4">联系我们   </span></li>
 		
@@ -43,6 +43,7 @@
 	       if(i==index){
 		   
 		        $('.font').eq(i).css("color","#a42527");
+				$('.guide-content ul li').eq(i).addClass('forli');
 				$('.icon').eq(i).css("background-image","url('image/icon"+(i)+".gif')");
 		        if(index==1){
 		        window.location.href="home.html";
@@ -53,16 +54,16 @@
 		if(index==0){
 		   $('.guide-content').hide();
 			 $('.shadow').hide();
+			
 		}
 		  }
 		   else{
 		       $('.font').eq(i).css("color","black");
 			   $('.icon').eq(i).css("background-image","url('image/icon"+(10+i)+".gif')");
-		  
+		        $('.guide-content ul li').eq(i).removeClass('forli');
 		   }
 	   
 	   }
-	   
 	});
 	$('.menu').click(function(){
 	   
@@ -84,7 +85,10 @@
 		});
 $('.guide-content ul').on('click','li',function(e){
 	    var index=$(this).index();
-		if(index==2){
+		if(index==4){
+		    window.location.href="contect.html";
+		}
+		if(index==1){
 		    window.location.href="home.html";
 		}
 		if(index==2){
