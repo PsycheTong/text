@@ -167,20 +167,23 @@ opacity:0.6;
 
     
 }
-.font1{
+.font2{
 	
     color:#a42527;
 }
+.icon0
+{
+    background-image:url('image/icon10.gif');
+
+}
+
 .icon1{
 
-	background-image:url('image/icon1.gif');
-}
-.font2{
-
+	background-image:url('image/icon11.gif');
 }
 .icon2{
 
-	background-image:url('image/icon12.gif');
+	background-image:url('image/icon2.gif');
 }
 .font3{
 	
