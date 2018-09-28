@@ -12,9 +12,6 @@
 		    font-family:pingfang;
 			font-weight:lighter;
 	   }
-	    div{
-		    -webkit-tap-highlight-color:rgba(0,0,0,0);
-	    }
 	   #resolution{
 	       overflow:auto;
 	   }
@@ -26,7 +23,7 @@
 		   margin-bottom:40px;
 	       font-size:36px;
 		   line-height:76px;
-		  padding:0px 40px;
+		  margin-left:20px;
 		 letter-spacing:5pt;
 	   }
 	    p span{
@@ -52,7 +49,7 @@
 		    font-weight:thick;
 	         color:#8e1315;
 		  font-size:45px;
-		  margin-left:40px;
+		  margin-left:20px;
 		  text-decoration:underline;
 		  line-height:70px;
 	   }
@@ -108,8 +105,8 @@ opacity:0.6;
 	float:left;
     top:40%;
 	left:13.8%;
-	width:13.8%;
-	height:37%;
+	width:14.8%;
+	height:27.5%;
 
 	background-size:100% 100%;
 }
@@ -127,7 +124,7 @@ opacity:0.6;
 	height:20%;
 	float:left;
 
-    border-bottom:dotted 1px black;
+    border-bottom:dotted 3px black;
 }
 .font{
     
@@ -199,9 +196,14 @@ opacity:0.6;
 	border-left:solid 10px black;
 	float:left;
 }
-
+.forli{
+	background-color:#f5e7e8;
+}
 .text1{
 	border-left:solid 10px #a42527;
+}
+.bottom{
+    padding-bottom:80px;
 }
 	</style>
 </head>
@@ -220,7 +222,7 @@ opacity:0.6;
 		<p>针对政务新媒体领域特色，政新科技研发了<span>40+</span>款特色产品，以技术驱动搭建政务新媒体产品平台，助力政务新媒体发展。</p>
 		<img class="s" src="image/s.gif">
 		<p>服务经验的积累，让我们更加清晰政务部门的宣传需求；对全媒体的了解，让我们把握在融媒体时代政务宣传新的要求；流程标准的规范，让我们从服务提供商升级进化为产品和平台的打造者。</p>
-		<p>内容为王，技术驱动，政新科技双管齐下，成为融媒体时代的政务新媒体服务先行者。</p>
+		<p class="bottom">内容为王，技术驱动，政新科技双管齐下，成为融媒体时代的政务新媒体服务先行者。</p>
 	
 	 <div class="guide"></div>
 	    <div class="menu"></div>
@@ -230,7 +232,7 @@ opacity:0.6;
 	    <div class="guide-content">
 		    <ul>
 			  <li> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
-			    <li> <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
+			    <li class="forli"> <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
 			    <li> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
 			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
 			    <li> <div class="icon icon4"> </div> <span class="font font4">联系我们   </span></li>
@@ -246,10 +248,11 @@ opacity:0.6;
 	});
 	$('.guide-content ul').on('click','li',function(e){
 	   var index=$(this).index();
-	 for(var i =0;i<5;i++){
+	for(var i =0;i<5;i++){
 	       if(i==index){
 		   
 		        $('.font').eq(i).css("color","#a42527");
+				$('.guide-content ul li').eq(i).addClass('forli');
 				$('.icon').eq(i).css("background-image","url('image/icon"+(i)+".gif')");
 		        if(index==1){
 		        window.location.href="home.html";
@@ -260,16 +263,16 @@ opacity:0.6;
 		if(index==0){
 		   $('.guide-content').hide();
 			 $('.shadow').hide();
+			
 		}
 		  }
 		   else{
 		       $('.font').eq(i).css("color","black");
 			   $('.icon').eq(i).css("background-image","url('image/icon"+(10+i)+".gif')");
-		  
+		        $('.guide-content ul li').eq(i).removeClass('forli');
 		   }
 	   
 	   }
-	   
 	});
 	$('.menu').click(function(){
 	   
@@ -291,7 +294,10 @@ opacity:0.6;
 		});
 $('.guide-content ul').on('click','li',function(e){
 	    var index=$(this).index();
-		if(index==2){
+		if(index==4){
+		    window.location.href="contect.html";
+		}
+		if(index==1){
 		    window.location.href="home.html";
 		}
 		if(index==2){
