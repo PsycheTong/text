@@ -1,54 +1,409 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
 <head>
-    <meta charset="utf-8">
-	<style>
-	    *{
-		    margin:0px;
-			padding:0px;
-		}
-	    .bowen{
-		    width:500px;
-			height:500px;
-			border:solid 1px black;
-			
-		}
-		.left{
-		    display:block;
-		    width:130px;
-			height:20px;
-			background-color:gray;
-		    position:relative;
-			top:50px;
-			left:100px;
-			transform:rotate(30deg);
-			transition:transform 0s ;
-		}
-	    .right{
-		    display:block;
-		    width:130px;
-			height:20px;
-			background-color:gray;
-		    position:relative;
-			top:30px;
-			left:200px;
-			transform:rotate(-30deg);
-			transition:transform 0s ;
-		}
-	</style>
-</head>
+    <meta charset="UTF-8">
+    <title>政新科技</title>
+	<meta name="description" content="政新科技，作为行业领先的政务新媒体服务商，致力于为政府单位提供标准化的政务新媒体服务产品，" />
+	<meta>
+    <link rel="icon" type="image/x-icon" href="image/g.gif" />
+    <link rel="stylesheet" href="js/m.css">
+	<script src="js/mobile.js"></script>
+    
+    <link rel="stylesheet" href="js/mobile.css">
+
+    <script src="js/jquery.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+	<script src="js/weixin.js"></script>
+	</head>
 <body>
-    <div class="bowen">
-	    <span class="1 left"></span>
-	    <span class="1 right"></span>
+    <!-- 浮动定位的主容器 -->
+	<div id="container">
+	    
+        
+		<!-- 第一层：一级页面：		-->
+       
+		<div class="classone">
+		    <ul class="c-1">
+	            <li><div class="page page1"></div></li>
+	            <li><div class="page page2"></div></li>
+	            <li><div class="page page3"></div></li>
+	            <li><div class="page page4"></div></li>
+			</ul>
+		</div>
+		<!-- 导航页面		-->
+	    <div class="guide"></div>
+	    <div class="menu"></div>
+		<div class="shadow"></div>
+		<div class="shouye"></div>
+		<img class="hand hand1" src="image/hand.gif">
 		
-		<span class="2 left"></span>
-	    <span class="2 right"></span>
-		<span class="3 left"></span>
-	    <span class="3 right"></span>
+	    <div class="guide-content">
+		    <ul>
+			    <li class="forli"> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
+			    <li> <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
+			    <li> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
+			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
+			    <li> <div class="icon icon4"> </div> <span class="font font4">联系我们   </span></li>
+			
+						
+			</ul>
+		<div class="menu1"></div>
+		</div>
+<!-- 	    <div class="guide-content">
+		    <div class="icon icon1"> </div>
+			<div class="icon icon2"></div>
+		    
+		    <div class="icon icon3"></div>
+		    <div class="icon icon4"></div>
+		    
+		    <span class="font font1">首页    </span>
+		    <span class="font font2">解决方案</span>
+			                         
+		    <span class="font font3">政新产品</span>
+		    <span class="font font4">联系我们</span>
+
+		</div> -->
 	</div>
+	
+	<!-- 浮动定位的导航区	-->
+	<div class="guide guide4">
+	    	     <div class="text text1"></div>
+	    	     <div class="text 2"></div>
+	    	     <div class="text 3"></div>
+	    	     <div class="text 4"></div>
+	</div>
+	<!-- 浮动定位的loarding界面	-->
+	<div id="loading">
+	  
+	     <p>Loading</p>
+		 
+		 <!-- 这里是loading后面的点点的 -->
+	     <!-- <div class="dian dian1"></div>
+	     <div class="dian dian2"></div>
+	     <div class="dian dian3"></div>
+	     <div class="dian dian4"></div>
+	     -->	
+		 
+	    <div class="ball ball1"></div>
+	    <div class="ball ball2"></div>
+	    <div class="ball ball3"></div>
+	    <div class="ball ball4"></div>
+	    <div class="ball ball5"></div>
+	    <div class="ball ball6"></div>
+	    <div class="ball ball7"></div>
+	  
+	
+	
+	</div>
+	
+	
+    <div class="element e1">
+	
+        <div class="jihe"></div>
+        <div class="jihe1"></div>
+	    <div class="jiantou"></div>
+	    <div class="yuan"></div>
+	    <div class="plane"></div>
+	    <div class="sanjiao"></div>
+	    <!-- <img class="car" src="image/car.gif"> -->
+	    <img class="fangkuai"src="image/fangkuai.gif">
+	    <img class="q"src="image/q.gif">
+	    <img class="ksj"src="image/ksj.gif">
+	    <img class="mahua"src="image/mahua.gif">
+	    <img class="g" src="image/g.gif">
+	    <img class="banyuan" src="image/banyuan.gif">
+	    <img class="taoquan" src="image/taoquan.gif">
+	    <img class="hdc" src="image/11.gif">
+		
+    </div>
+	
+<script>
+function onBridgeReady() {
+           
+			WeixinJSBridge.call('hideToolbar'); 
+        }
+
+        if (typeof WeixinJSBridge == "undefined") {
+            if (document.addEventListener) {
+                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+            } else if (document.attachEvent) {
+                document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+            }
+        } else {
+            onBridgeReady();
+        }
 
 
-</body>
+//初始化信息
+var width=document.body.clientWidth;//记录下当前手机视窗可见区域的宽度；
+var height=document.body.clientHeight;//记录下当前手机视窗可见区域的高度；
+var containerWidth=width*5;//记录五倍宽度的媒介值作为容器宽度
+var fwidth=-1*width;//五倍宽度取负数的媒介值
+var page =document.getElementsByClassName('page');//拿到不同页面的集合
+var $loading = $('#loading');//获取加载页面
+var width_title=0.49*width;
+var height_title=0.055*height;
+ 
+//初始化设置
+//设置父容器的宽度为五倍的当前可是区域的宽度；
+$('#container').css("width",containerWidth);
+//设置二级父容器的宽度为当前可是区域宽度的五倍
+$('.classone').css("width",containerWidth);
+//UL标签同上
+$('.c-1').css("width",containerWidth);
+//每个LI标签的的宽度等于当前可视区域的宽度
+$('.c-1 li').css("width",width);
+//页面本身的宽度等于当前可视区域的宽度；
+$('.page').css("width",width);
+$('.element').css("width",width);
 
+//所有资源文件加载完成之后触发该事件；
+    window.onload=function(){
+
+        $loading.hide();//关闭加载页面；
+        $('.title').css("width",width_title);
+        $('.title2').css("width",width*(0.685));
+        $('.title').css("height",height_title);
+        var hdc_width=$('.hdc').css("width"); 
+		var hongyuan_width=$('.yuan').css("width");
+		var sanjiao_width=$('.sanjiao').css("width");
+		var fangkuai_width=$('.fangkuai').css("width");
+		var jiantou_width=$('.jiantou').css("width");
+		var q_width=$('.q').css("width");
+		var g_width=$('.g').css("width");
+		var ksj_width=$('.ksj').css("width");
+		var banyuan_width=$('.banyuan').css("width");
+		var taoquan_width=(0.8)*Number($('.taoquan').width());
+		$('.hdc').css("height",hdc_width);
+		$('.yuan').css("height",hongyuan_width);
+		$('.sanjiao').css("height",sanjiao_width);
+		$('.fangkuai').css("height",fangkuai_width);
+		$('.q').css("height",q_width);
+		
+		$('.g').css("height",g_width);
+		$('.ksj').css("height",ksj_width);
+		$('.banyuan').css("height",banyuan_width);
+		$('.jiantou').css("height",jiantou_width);
+		$('.taoquan').css("height",taoquan_width+'px');
+		console.log(taoquan_width);
+        var startX;//手指开始触控的位置
+	    var endX;//手指结束触控的位置
+        var pageindex=0;
+        var timer = setInterval(autoPlay,5000);
+	    
+		$('.menu').click(function(){
+	   
+	         if($('.guide-content').css('display')=='block'){
+			 			
+		 $('.guide-content').toggle();
+		 $('.shadow').toggle();
+			 }else{
+			      $('.guide-content').toggle();
+			      $('.shadow').toggle();
+			 }
+		 
+	});
+	
+	    $('.shadow').click(function(){
+		     $('.guide-content').hide();
+			 $('.shadow').hide();
+		
+		});
+        function autoPlay(){
+          
+               
+       
+                    if(pageindex<3){
+                    
+               
+                	    			 	$('.classone').css("transition","left 0.5s ease");
+                						 $('.classone').css("left",(-1)*(pageindex+1)*width);
+                	    				 $('.text').eq(pageindex+1).addClass('text1');
+                	    				$('.text').eq(pageindex).removeClass('text1');
+pageindex=pageindex+1;
+                
+                }else{
+                pageindex=0;
+                				$('.classone').css("left","0px");
+                				$('.classone').css("transition","left 0s ease");
+                				$('.text').eq(3).removeClass('text1');
+                	    		$('.text').eq(0).addClass('text1');
+						
+                }
+                
+                
+
+            
+        }
+		$('.shouye').click(function(){
+		    			
+            $('.element').removeClass('e1');
+            $('.hand').removeClass('hand1');
+            $('.element').addClass('e2');
+            $('.hand').addClass('hand2');
+
+            clearInterval(timer);
+			$('.classone').css("left","0px");
+			$('.classone').css("transition","left 0s ease");
+		     
+		});
+		//为每个底板加入touchstart的监听事件
+	    $('.c-1').on('touchstart','li',function(e){
+	        var touch = e.originalEvent.targetTouches[0]; 
+	    	var x = Number(touch.pageX); //页面触点X坐标
+            //记录触摸事件开始时的位置
+	    	console.log(x);
+			startX=x;
+           
+
+	    
+	    });
+	    
+		//为每个底板加入touchmove的监听事件
+	    $('.c-1').on('touchmove','li',function(e){
+	        var touch = e.originalEvent.targetTouches[0]; 
+            var x = Number(touch.pageX); //页面触点X坐标
+            //记录move事件结束时的位置
+	    	endX=x;
+			
+$('.element').removeClass('e2');
+$('.hand').removeClass('hand2');
+
+            clearInterval(timer);
+	    
+	    });
+	    
+		//为每个底板加入touchend的监听事件
+	    $('.c-1').on('touchend','li',function(e){
+	        //计算距离
+			
+	    	var d1=endX-startX;
+	    	//获取当前被点击的页面的索引
+	        var index=$(this).index();
+	    	
+            $('.element').removeClass('e1');
+            $('.hand').removeClass('hand1');
+
+			console.log(d1);
+
+	    	//建立循环遍历
+	    	for(i=0;i<4;i++){
+	    	    //每个页面翻页周后left值变化的逻辑控制
+	            var d=(i+1)*fwidth;
+	    	    var fd=(-1)*(i-1)*width;
+	    	    if(index==i){
+	    	    	 
+	    	    	if(d1>19&&i!=0){
+	                    $('.classone').css("left",fd);
+						$('.classone').css("transition","left 0.5s ease");
+	    				$('.text').eq(i).removeClass('text1');
+	    				$('.title').eq(i).removeClass('title-animation');
+	    				$('.title').eq(i-1).addClass('title-animation');
+						$('.text').eq(i-1).addClass('text1');
+	    				$('.title').eq(i-1).addClass('title-animation');
+                        $('.element').addClass('e2'); 
+                        $('.hand').addClass('hand2'); 
+			
+						
+                    }     
+	    			else if(d1>10&&i==0){
+					    $('.classone').css("left",(-3)*width);
+					    $('.classone').css("transition","left 0s ease");
+					    $('.text').eq(i).removeClass('text1');
+					    $('.text').eq(3).addClass('text1');
+					    $('.title').eq(i).removeClass('title-animation');
+	    				$('.title').eq(3).addClass('title-animation');
+						$('.element').addClass('e2'); 
+						$('.hand').addClass('hand2'); 
+			
+					
+	    			}
+	    			else if(d1<-10&&i==3){
+					    $('.classone').css("left","0px");
+					    $('.classone').css("transition","left 0s ease");
+					    $('.text').eq(i).removeClass('text1');
+	    				$('.text').eq(0).addClass('text1');
+						
+						$('.title').eq(i).removeClass('title-animation');
+	    				$('.title').eq(0).addClass('title-animation');
+						$('.element').addClass('e2'); 
+						$('.hand').addClass('hand2'); 
+			
+					  	}
+                    else if (d1<-10&&i!=3){
+					  
+						$('.classone').css("transition","left 0.5s ease");
+						
+	    			    $('.title').eq(i).removeClass('title-animation');
+	    				$('.title').eq(i+1).addClass('title-animation');
+						$('.element').addClass('e2'); 
+						$('.hand').addClass('hand2'); 
+			
+	    	    		$('.classone').css("left",d);
+	    				$('.text').eq(i+1).addClass('text1');
+	    			    $('.text').eq(i).removeClass('text1');
+	    	    	}
+                 }
+                				 
+                 				
+                
+	        }
+	    });
+        
+    //为每一个页面添加点击监听事件
+	$('.c-1').on('click','li',function(e){
+	    var index=$(this).index();
+		if(index==1){
+		    window.location.href="resolution.html";
+		}
+		if(index==0){
+		    window.location.href="home.html";
+		}
+	});
+	
+	
+	
+		//为导航按钮添加监听事件
+	$('.guide-content ul').on('click','li',function(e){
+	   var index=$(this).index();
+	   for(var i =0;i<5;i++){
+	       if(i==index){
+		   
+		        $('.font').eq(i).css("color","#a42527");
+				$('.guide-content ul li').eq(i).addClass('forli');
+				$('.icon').eq(i).css("background-image","url('image/icon"+(i)+".gif')");
+		if(index==4){
+		    window.location.href="contect.html";
+		}
+		if(index==1){
+		    window.location.href="home.html";
+		}
+		if(index==2){
+		    window.location.href="resolution.html";
+		}
+		if(index==0){
+		    window.location.href="index.html";
+		}
+		  }
+		   else{
+		       $('.font').eq(i).css("color","black");
+			   $('.icon').eq(i).css("background-image","url('image/icon"+(10+i)+".gif')");
+		        $('.guide-content ul li').eq(i).removeClass('forli');
+		   }
+	   
+	   }
+	   
+	});
+	
+  
+        
+	}
+
+
+</script>
+
+</body> 
 </html>
