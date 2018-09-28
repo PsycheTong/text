@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>政新科技</title>
-   
+	<meta name="description" content="政新科技，作为行业领先的政务新媒体服务商，致力于为政府单位提供标准化的政务新媒体服务产品，" />
+	<meta>
+    <link rel="icon" type="image/x-icon" href="image/g.gif" />
     <link rel="stylesheet" href="js/m.css">
 	<script src="js/mobile.js"></script>
     
@@ -38,7 +40,8 @@
 		
 	    <div class="guide-content">
 		    <ul>
-			    <li> <div class="icon icon1"> </div> <span class="font font1">首页    </span></li>
+			    <li> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
+			    <li> <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
 			    <li> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
 			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
 			    <li> <div class="icon icon4"> </div> <span class="font font4">联系我们   </span></li>
@@ -117,7 +120,7 @@
 	
 <script>
 function onBridgeReady() {
-            WeixinJSBridge.call('hideOptionMenu');
+           
 			WeixinJSBridge.call('hideToolbar'); 
         }
 
@@ -341,27 +344,31 @@ $('.element').removeClass('e2');
 		    window.location.href="home.html";
 		}
 	});
-	$('.guide-content ul').on('click','li',function(e){
-	    var index=$(this).index();
-		if(index==1){
-		    window.location.href="resolution.html";
-		}
-		if(index==0){
-		    window.location.href="home.html";
-		}
-	});
+	
+	
+	
 		//为导航按钮添加监听事件
 	$('.guide-content ul').on('click','li',function(e){
 	   var index=$(this).index();
-	   for(var i =0;i<4;i++){
+	   for(var i =0;i<5;i++){
 	       if(i==index){
 		   
 		        $('.font').eq(i).css("color","#a42527");
-				$('.icon').eq(i).css("background-image","url('image/icon"+(1+i)+".gif')");
-		   }
+				$('.icon').eq(i).css("background-image","url('image/icon"+(i)+".gif')");
+		        if(index==1){
+		        window.location.href="home.html";
+		}
+		if(index==2){
+		    window.location.href="resolution.html";
+		}
+		if(index==0){
+		   $('.guide-content').hide();
+			 $('.shadow').hide();
+		}
+		  }
 		   else{
 		       $('.font').eq(i).css("color","black");
-			   $('.icon').eq(i).css("background-image","url('image/icon"+(11+i)+".gif')");
+			   $('.icon').eq(i).css("background-image","url('image/icon"+(10+i)+".gif')");
 		  
 		   }
 	   
