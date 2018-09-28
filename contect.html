@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+    <script src="js/jquery.js"></script>
+
+    <style>
+	   *{
+	       margin:0px;
+		   padding:0px;
+		    font-family:pingfang;
+			font-weight:lighter;
+	   }
+	   #resolution{
+	       overflow:auto;
+	   }
+	   img{
+	       width:100%;
+	   }
+	
+	   
+	
+	   .back{
+	       width:200px;
+		   height:200px;
+	
+		   position:fixed;
+		   top:0px;
+		   left:0px;
+	   }
+	   .guide{
+	position:fixed;
+	top:96%;
+	left:40%;
+	width:100%;
+	height:1.8%;
+	z-index:8;
+	
+}.menu{
+	position:fixed;
+	top:0px;
+	right:0px;
+	width:13%;
+	height:8%;
+	background-color:transparent;
+	z-index:8;
+}
+.guide-content{
+	position:fixed;
+	top:0px;
+	right:0px;
+	width:31%;
+	height:100%;
+	background-color:white;
+	display:none;
+z-index:7;
+}
+.shadow{
+	position:fixed;
+	top:0px;
+    left:0px;
+	width:69%;
+	height:100%;
+	background-color:black;
+	display:none;
+z-index:7;
+opacity:0.6;
+}
+.icon{
+	position:relative;
+    display:block;
+	float:left;
+    top:40%;
+	left:13.8%;
+	width:14.8%;
+	height:27.5%;
+
+	background-size:100% 100%;
+}
+.guide-content ul{
+	position:relative;
+	top:7.6%;
+	left:0px;
+	list-style:none;
+	width:100%;
+   
+	height:50%;
+}
+.guide-content li{
+	width:100%;
+	height:20%;
+	float:left;
+
+    border-bottom:dotted 3px black;
+}
+.font{
+    
+	position:relative;
+	top:40%;
+	left:29%;
+	display:block;
+	width:58%;
+	font-size:30px;
+	height:100%;
+	float:left;
+
+    
+}
+.font4{
+	
+    color:#a42527;
+}
+.icon0
+{
+    background-image:url('image/icon10.gif');
+
+}
+
+.icon1{
+
+	background-image:url('image/icon11.gif');
+}
+.font2{
+
+}
+.icon2{
+
+	background-image:url('image/icon12.gif');
+}
+.font3{
+	
+	
+}
+.menu1{
+	position:fixed;
+	top:2.2%;
+	right:2.6%;
+	width:8%;
+	height:3.7%;
+	
+	background-image:url('image/menu.gif');
+	background-size:100% 100%;
+}
+.icon3{
+	
+	background-image:url('image/icon13.gif');
+}
+.font4{
+	
+}
+.icon4{
+	
+	background-image:url('image/icon4.gif');
+}
+.text{
+
+	width:0px;
+	height:0px;
+	
+	margin-left:6px;
+	background-color:transparent;
+	border:solid 7px transparent;
+	border-left:solid 10px black;
+	float:left;
+}
+.forli{
+	background-color:#f5e7e8;
+}
+.text1{
+	border-left:solid 10px #a42527;
+}
+.imageCode{
+    position:fixed;
+    top:45%;
+	left:34.5%;
+	width:31%;
+}
+.kuang{
+position:fixed;
+    top:43.6%;
+	left:32.3%;
+	width:36%;
+	animation:kuang 1.8s infinite;
+}
+h2{
+    text-align:center;
+	position:fixed;
+	top:68%;
+
+	font-size:40px;
+	 left:19.8%;
+}
+h3{
+position:fixed;
+    color:#a42527;
+	font-size:32px;
+	left:16.8%;
+}
+.a1{
+   
+   
+   top:78.6%;
+   
+	
+	
+}
+.a2{
+  
+   top:84.9%;
+
+}
+
+.a3{
+   top:91%;
+
+}
+
+
+.i1{
+    position:fixed;
+	top:77.7%;
+	left:7%;
+	width:6.8%;
+}
+.i2{
+    position:fixed;
+	top:83.8%;
+	left:7%;
+	width:6.8%;
+}
+.i3{
+    position:fixed;
+	top:90.2%;
+	left:7%;
+	width:6.8%;
+}
+@keyframes kuang{
+    0%{
+	    opacity:0;
+	}
+	60%{
+	    opacity:1;
+	}
+	70%{
+	
+	opacity:0;
+	
+	}
+	80%{
+	    opacity:1;
+	}
+	90%{
+	    opacity:0;
+	}
+	100%{
+	    opacity:1;
+	}
+}
+	</style>
+</head>
+<body>
+    <div id="resolution">
+	    <div class="back"></div>
+		<img class="toutu" src="image/l_toutu.gif">
+		<img class="imageCode" src="image/imageCode.jpg">
+		<img class="kuang" src="image/kuang.gif">
+	    <h2>识别二维码关注“政新科技”了解更多</h2>
+		
+		<h3 class="a1">5x8小时电话咨询：010-67713900</h3>
+		<h3 class="a2">电子邮箱：zxkj@govnewmedia.com</h3>
+		<h3 class="a3">地址：北京市朝阳区 通惠河畔1131号君天大厦4003室</h3>
+    </div>
+	
+	    <img class="i1" src="image/i1.gif">
+	    <img class="i2" src="image/i2.gif">
+	    <img class="i3" src="image/i3.gif">
+     	<div class="menu"></div>
+		<div class="shadow"></div>
+		
+		
+	<div class="guide-content">
+		    <ul>
+			  <li> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
+			    <li > <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
+			    <li> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
+			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
+			    <li class="forli"> <div class="icon icon4"> </div> <span class="font font4">联系我们   </span></li>
+			
+						
+			</ul>
+		<div class="menu1"></div>
+	</div>
+	
+<script>
+    $('.back').click(function(){
+	     window.location.href="index.html";
+	});
+	$('.guide-content ul').on('click','li',function(e){
+	   var index=$(this).index();
+	for(var i =0;i<5;i++){
+	       if(i==index){
+		   
+		        $('.font').eq(i).css("color","#a42527");
+				$('.guide-content ul li').eq(i).addClass('forli');
+				$('.icon').eq(i).css("background-image","url('image/icon"+(i)+".gif')");
+		        if(index==1){
+		        window.location.href="home.html";
+		}
+		if(index==2){
+		    window.location.href="resolution.html";
+		}
+		if(index==0){
+		   $('.guide-content').hide();
+			 $('.shadow').hide();
+			
+		}
+		  }
+		   else{
+		       $('.font').eq(i).css("color","black");
+			   $('.icon').eq(i).css("background-image","url('image/icon"+(10+i)+".gif')");
+		        $('.guide-content ul li').eq(i).removeClass('forli');
+		   }
+	   
+	   }
+	});
+	$('.menu').click(function(){
+	   
+	         if($('.guide-content').css('display')=='block'){
+			 			
+		 $('.guide-content').toggle();
+		 $('.shadow').toggle();
+			 }else{
+			      $('.guide-content').toggle();
+			      $('.shadow').toggle();
+			 }
+		 
+	});
+	
+	    $('.shadow').click(function(){
+		     $('.guide-content').hide();
+			 $('.shadow').hide();
+		
+		});
+$('.guide-content ul').on('click','li',function(e){
+	    var index=$(this).index();
+		if(index==4){
+		    window.location.href="contect.html";
+		}
+		if(index==1){
+		    window.location.href="home.html";
+		}
+		if(index==2){
+		    window.location.href="resolution.html";
+		}
+		if(index==0){
+		    window.location.href="index.html";
+		}
+	});
+</script>
+</body>
+</html>
