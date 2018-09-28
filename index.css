@@ -230,25 +230,26 @@ opacity:0.6;
 
     
 }
-.font1{
+.font0{
 	
     color:#a42527;
 }
+.icon0
+{
+    background-image:url('image/icon0.gif');
+
+}
+
 .icon1{
 
-	background-image:url('image/icon1.gif');
+	background-image:url('image/icon11.gif');
 }
-.font2{
 
-}
 .icon2{
 
 	background-image:url('image/icon12.gif');
 }
-.font3{
-	
-	
-}
+
 .menu1{
 	position:fixed;
 	top:2.2%;
