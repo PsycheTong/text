@@ -36,11 +36,12 @@
 	    <div class="guide"></div>
 	    <div class="menu"></div>
 		<div class="shadow"></div>
-		
+		<div class="shouye"></div>
+		<img class="hand hand1" src="image/hand.gif">
 		
 	    <div class="guide-content">
 		    <ul>
-			    <li> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
+			    <li class="forli"> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
 			    <li> <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
 			    <li> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
 			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
@@ -187,9 +188,9 @@ $('.element').css("width",width);
 		$('.banyuan').css("height",banyuan_width);
 		$('.jiantou').css("height",jiantou_width);
 		$('.taoquan').css("height",taoquan_width+'px');
-		console.log(taoquan_width);
-        var startX;//手指开始触控的位置
+		 var startX;//手指开始触控的位置
 	    var endX;//手指结束触控的位置
+		var distance;
         var pageindex=0;
         var timer = setInterval(autoPlay,5000);
 	    
@@ -237,14 +238,28 @@ pageindex=pageindex+1;
 
             
         }
+		
+		$('.shouye').click(function(){
+		    			
+            $('.element').removeClass('e1');
+            $('.hand').removeClass('hand1');
+            $('.element').addClass('e2');
+            $('.hand').addClass('hand2');
+
+            clearInterval(timer);
+			$('.classone').css("left","0px");
+			$('.classone').css("transition","left 0s ease");
+		     
+		});
 		//为每个底板加入touchstart的监听事件
 	    $('.c-1').on('touchstart','li',function(e){
-	        var touch = e.originalEvent.targetTouches[0]; 
+	        
+			var touch = e.originalEvent.targetTouches[0]; 
 	    	var x = Number(touch.pageX); //页面触点X坐标
             //记录触摸事件开始时的位置
-	    	console.log(x);
+	    	console.log("记录开始的位置"+x);
 			startX=x;
-           
+            endX=startX;
 
 	    
 	    });
@@ -253,34 +268,38 @@ pageindex=pageindex+1;
 	    $('.c-1').on('touchmove','li',function(e){
 	        var touch = e.originalEvent.targetTouches[0]; 
             var x = Number(touch.pageX); //页面触点X坐标
-            //记录move事件结束时的位置
-	    	endX=x;
+			endX=x;
 			
-$('.element').removeClass('e2');
-
+            $('.element').removeClass('e2');
+            $('.hand').removeClass('hand2');
+         
             clearInterval(timer);
+		
 	    
 	    });
 	    
 		//为每个底板加入touchend的监听事件
 	    $('.c-1').on('touchend','li',function(e){
-	        //计算距离
-			
-	    	var d1=endX-startX;
+	       
 	    	//获取当前被点击的页面的索引
 	        var index=$(this).index();
-	    	
+	    	 //计算距离
+			
+	    	var d1=endX-startX;
+			console.log("结束位置"+endX);
+			console.log("走过的距离"+d1);
             $('.element').removeClass('e1');
+            $('.hand').removeClass('hand1');
 
-			console.log(d1);
-
+			
+           
 	    	//建立循环遍历
 	    	for(i=0;i<4;i++){
 	    	    //每个页面翻页周后left值变化的逻辑控制
 	            var d=(i+1)*fwidth;
 	    	    var fd=(-1)*(i-1)*width;
 	    	    if(index==i){
-	    	    	 
+	    	    	  endX=startX;
 	    	    	if(d1>19&&i!=0){
 	                    $('.classone').css("left",fd);
 						$('.classone').css("transition","left 0.5s ease");
@@ -290,6 +309,7 @@ $('.element').removeClass('e2');
 						$('.text').eq(i-1).addClass('text1');
 	    				$('.title').eq(i-1).addClass('title-animation');
                         $('.element').addClass('e2'); 
+                        $('.hand').addClass('hand2'); 
 			
 						
                     }     
@@ -301,6 +321,7 @@ $('.element').removeClass('e2');
 					    $('.title').eq(i).removeClass('title-animation');
 	    				$('.title').eq(3).addClass('title-animation');
 						$('.element').addClass('e2'); 
+						$('.hand').addClass('hand2'); 
 			
 					
 	    			}
@@ -313,6 +334,7 @@ $('.element').removeClass('e2');
 						$('.title').eq(i).removeClass('title-animation');
 	    				$('.title').eq(0).addClass('title-animation');
 						$('.element').addClass('e2'); 
+						$('.hand').addClass('hand2'); 
 			
 					  	}
                     else if (d1<-10&&i!=3){
@@ -322,6 +344,7 @@ $('.element').removeClass('e2');
 	    			    $('.title').eq(i).removeClass('title-animation');
 	    				$('.title').eq(i+1).addClass('title-animation');
 						$('.element').addClass('e2'); 
+						$('.hand').addClass('hand2'); 
 			
 	    	    		$('.classone').css("left",d);
 	    				$('.text').eq(i+1).addClass('text1');
@@ -332,6 +355,7 @@ $('.element').removeClass('e2');
                  				
                 
 	        }
+			
 	    });
         
     //为每一个页面添加点击监听事件
@@ -342,6 +366,12 @@ $('.element').removeClass('e2');
 		}
 		if(index==0){
 		    window.location.href="home.html";
+		}
+		if(index==3){
+		    window.location.href="contect.html";
+		}
+		if(index==2){
+		    window.location.href="product.html";
 		}
 	});
 	
@@ -354,22 +384,28 @@ $('.element').removeClass('e2');
 	       if(i==index){
 		   
 		        $('.font').eq(i).css("color","#a42527");
+				$('.guide-content ul li').eq(i).addClass('forli');
 				$('.icon').eq(i).css("background-image","url('image/icon"+(i)+".gif')");
-		        if(index==1){
-		        window.location.href="home.html";
+		if(index==4){
+		    window.location.href="contect.html";
+		}
+		if(index==1){
+		    window.location.href="home.html";
 		}
 		if(index==2){
 		    window.location.href="resolution.html";
 		}
 		if(index==0){
-		   $('.guide-content').hide();
-			 $('.shadow').hide();
+		    window.location.href="index.html";
+		}
+		if(index==3){
+		    window.location.href="product.html";
 		}
 		  }
 		   else{
 		       $('.font').eq(i).css("color","black");
 			   $('.icon').eq(i).css("background-image","url('image/icon"+(10+i)+".gif')");
-		  
+		        $('.guide-content ul li').eq(i).removeClass('forli');
 		   }
 	   
 	   }
