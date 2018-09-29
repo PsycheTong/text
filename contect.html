@@ -6,6 +6,9 @@
     <script src="js/jquery.js"></script>
 
     <style>
+	    body,html{
+		    position:fixed;
+		}
 	   *{
 	       margin:0px;
 		   padding:0px;
@@ -16,6 +19,7 @@
 	       overflow:auto;
 	   }
 	   img{
+	   position:fixed;
 	       width:100%;
 	   }
 	
@@ -24,7 +28,7 @@
 	   .back{
 	       width:200px;
 		   height:200px;
-	
+	       z-index:9;
 		   position:fixed;
 		   top:0px;
 		   left:0px;
@@ -173,14 +177,14 @@ opacity:0.6;
 .imageCode{
     position:fixed;
     top:45%;
-	left:34.5%;
-	width:31%;
+	left:37%;
+	width:26%;
 }
 .kuang{
 position:fixed;
     top:43.6%;
-	left:32.3%;
-	width:36%;
+	left:35%;
+	width:30%;
 	animation:kuang 1.8s infinite;
 }
 h2{
@@ -349,6 +353,9 @@ $('.guide-content ul').on('click','li',function(e){
 		}
 		if(index==1){
 		    window.location.href="home.html";
+		}
+		if(index==3){
+		    window.location.href="procduct.html";
 		}
 		if(index==2){
 		    window.location.href="resolution.html";
