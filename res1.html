@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+    <script src="js/jquery.js"></script>
+
+    <style>
+	   *{
+	       margin:0px;
+		   padding:0px;
+		    font-family:pingfang;
+			font-weight:lighter;
+	   }
+	   #resolution{
+	       overflow:auto;
+	   }
+	   img{
+	       width:100%;
+	   }
+	   p{
+	       margin-top:40px;
+		   margin-bottom:40px;
+	       font-size:23px;
+		   line-height:76px;
+		  margin-left:35px;
+		  margin-right:35px;
+		`
+		 letter-spacing:5pt;
+	   }
+	    p span{
+		 color:#8e1315;
+		 font-weight:thick;
+	    }
+	   h1{
+	   margin-top:30px;
+	   margin-bottom:-10px;
+	   font-weight:thick;
+	  
+		   font-size:45px;
+		  text-align:center;
+		  
+		  line-height:100px;
+		 
+	   }
+	   .s{
+	   margin-top:30px;
+	   margin-bottom:30px;
+	   }
+	   h2{
+		    font-weight:thick;
+	      text-align:center;
+		  font-size:45px;
+		  padding-left:45px;
+		 
+		 
+		  line-height:70px;
+	   }
+	   .back{
+	       width:200px;
+		   height:200px;
+	
+		   position:fixed;
+		   top:0px;
+		   left:0px;
+	   }
+	   .guide{
+	position:fixed;
+	top:96%;
+	left:40%;
+	width:100%;
+	height:1.8%;
+	z-index:8;
+	
+}.menu{
+	position:fixed;
+	top:0px;
+	right:0px;
+	width:13%;
+	height:8%;
+	background-color:transparent;
+	z-index:8;
+}
+.guide-content{
+	position:fixed;
+	top:0px;
+	right:0px;
+	width:31%;
+	height:100%;
+	background-color:white;
+	display:none;
+z-index:7;
+}
+.shadow{
+	position:fixed;
+	top:0px;
+    left:0px;
+	width:69%;
+	height:100%;
+	background-color:black;
+	display:none;
+z-index:7;
+opacity:0.6;
+}
+.icon{
+	position:relative;
+    display:block;
+	float:left;
+    top:40%;
+	left:13.8%;
+	width:14.8%;
+	height:27.5%;
+
+	background-size:100% 100%;
+}
+.guide-content ul{
+	position:relative;
+	top:7.6%;
+	left:0px;
+	list-style:none;
+	width:100%;
+   
+	height:50%;
+}
+.guide-content li{
+	width:100%;
+	height:20%;
+	float:left;
+
+    border-bottom:dotted 3px black;
+}
+.font{
+    
+	position:relative;
+	top:40%;
+	left:29%;
+	display:block;
+	width:58%;
+	font-size:30px;
+	height:100%;
+	float:left;
+
+    
+}
+.font1{
+	
+    color:#a42527;
+}
+.icon0
+{
+    background-image:url('image/icon10.gif');
+
+}
+
+.icon1{
+
+	background-image:url('image/icon1.gif');
+}
+.font2{
+
+}
+.icon2{
+
+	background-image:url('image/icon12.gif');
+}
+.font3{
+	
+	
+}
+.menu1{
+	position:fixed;
+	top:2.2%;
+	right:2.6%;
+	width:8%;
+	height:3.7%;
+	
+	background-image:url('image/menu.gif');
+	background-size:100% 100%;
+}
+.icon3{
+	
+	background-image:url('image/icon13.gif');
+}
+.font4{
+	
+}
+.icon4{
+	
+	background-image:url('image/icon14.gif');
+}
+.text{
+
+	width:0px;
+	height:0px;
+	
+	margin-left:6px;
+	background-color:transparent;
+	border:solid 7px transparent;
+	border-left:solid 10px black;
+	float:left;
+}
+.forli{
+	background-color:#f5e7e8;
+}
+.text1{
+	border-left:solid 10px #a42527;
+}
+.bottom {
+font-size:36px;
+
+    padding-bottom:80px;
+	text-align:center;
+}
+	</style>
+</head>
+<body>
+    <div id="resolution">
+	    <div class="back"></div>
+	    <img class="toutu" src="image/toutu1.jpg">
+		<h1>我们的优势</h1>
+		<p>1、资深采编团队，策划能力强，方向把握准。</p>
+		
+		<p>2、传统媒体经历，信息来源广，政治意识强。</p>
+		<p>3、大量实操经验，五年打磨，为各级政府服务。</p>
+		<p>4、丰富表现手段，懂得用新颖的形式表达内容。</p>
+		<p>5、内容审核严格，专业校对令政务形象零差错。</p>
+		<h2>架构流程</h2>
+		<img class="intro" src="image/res1.png">
+		<h2>方案应用产品</h2>
+		<img class="s" src="image/prod1.png">
+		
+	    <h2>其他解决方案</h2>
+		<p class="bottom"><a href="resolution.html">（点击查看更多解决方案）</a></p>
+	
+	 <div class="guide"></div>
+	    <div class="menu"></div>
+		<div class="shadow"></div>
+		
+		
+	    <div class="guide-content">
+		    <ul>
+			  <li> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
+			    <li class="forli"> <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
+			    <li> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
+			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
+			    <li> <div class="icon icon4"> </div> <span class="font font4">联系我们   </span></li>
+			
+						
+			</ul>
+		<div class="menu1"></div>
+	</div>
+	
+<script>
+    $('.back').click(function(){
+	     window.location.href="index.html";
+	});
+	$('.guide-content ul').on('click','li',function(e){
+	   var index=$(this).index();
+	for(var i =0;i<5;i++){
+	       if(i==index){
+		   
+		        $('.font').eq(i).css("color","#a42527");
+				$('.guide-content ul li').eq(i).addClass('forli');
+				$('.icon').eq(i).css("background-image","url('image/icon"+(i)+".gif')");
+		        if(index==1){
+		        window.location.href="home.html";
+		}
+		if(index==2){
+		    window.location.href="resolution.html";
+		}
+		if(index==0){
+		   $('.guide-content').hide();
+			 $('.shadow').hide();
+			
+		}
+		  }
+		   else{
+		       $('.font').eq(i).css("color","black");
+			   $('.icon').eq(i).css("background-image","url('image/icon"+(10+i)+".gif')");
+		        $('.guide-content ul li').eq(i).removeClass('forli');
+		   }
+	   
+	   }
+	});
+	$('.menu').click(function(){
+	   
+	         if($('.guide-content').css('display')=='block'){
+			 			
+		 $('.guide-content').toggle();
+		 $('.shadow').toggle();
+			 }else{
+			      $('.guide-content').toggle();
+			      $('.shadow').toggle();
+			 }
+		 
+	});
+	
+	    $('.shadow').click(function(){
+		     $('.guide-content').hide();
+			 $('.shadow').hide();
+		
+		});
+$('.guide-content ul').on('click','li',function(e){
+	    var index=$(this).index();
+		if(index==4){
+		    window.location.href="contect.html";
+		}
+		if(index==1){
+		    window.location.href="home.html";
+		}
+		if(index==2){
+		    window.location.href="resolution.html";
+		}
+		if(index==0){
+		    window.location.href="index.html";
+		}
+		if(index==3){
+		    window.location.href="product.html";
+		}
+	});
+</script>
+</body>
+</html>
