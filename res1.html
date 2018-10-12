@@ -26,8 +26,8 @@
 		   line-height:76px;
 		  margin-left:40px;
 		
-		`
 		 letter-spacing:5pt;
+		
 	   }
 	    p span{
 		 color:#8e1315;
@@ -212,13 +212,128 @@ font-size:36px;
     padding-bottom:80px;
 	text-align:center;
 }
+.fgx{
+    width:60%;
+    margin-left:20%;
+}
+.banner{
+    text-align:center;
+	font-size:24px;
+	margin-top:15px;
+	margin-bottom:80px;
+}
+.toutu1{
+    position:fixed;
+	top:0px;
+	width:100%;
+	opacity:0;
+	animation:toutu1 1s ease-in 0.5s 1;
+	animation-fill-mode:forwards;
+}
+@keyframes toutu1{
+    0%{
+	    opacity:0;
+	}
+	100%{
+	    opacity:1;
+	}
+}
+.b1{
+display:block;
+width:10px;
+height:11.1%;
+background-color:white;
+position:absolute;
+animation:b1 0.5s ease-in 1;
+top:13.8%;
+left:28.8%;
+}
+@keyframes b1{
+    0%{
+	   top:24.5%;
+	    height:0%;
+	}
+	100%{
+	top:13.8%;
+	    height:11.1%;
+	}
+}
+.b2{
+display:block;
+width:10px;
+height:11.1%;
+background-color:white;
+animation:b2 0.5s ease-in 1;
+position:absolute;
+top:13.8%;
+left:70%;
+}
+@keyframes b2{
+    0%{
+	    height:0%;
+	}
+	100%{
+	    height:11.1%;
+	}
+}
+.b3{
+display:block;
+width:41.2%;
+height:10px;
+background-color:white;
+position:absolute;
+animation:b3 0.5s ease-in 1;
+
+top:13.8%;
+left:28.8%;
+}
+@keyframes b3{
+    0%{
+	   
+	   width:0%;
+	}
+	100%{
+	   width:41.2%;
+	}
+}
+.b4{
+display:block;
+width:41.2%;
+height:10px;
+background-color:white;
+position:absolute;
+animation:b4 0.5s ease-in 1;
+top:24.5%;
+left:28.8%;
+}
+@keyframes b4{
+    0%{
+	   width:0%;
+	   left:70%;
+	}
+	100%{
+	   width:41.2%;
+	   left:28.8%;
+	}
+}
+
 	</style>
 </head>
 <body>
     <div id="resolution">
 	    <div class="back"></div>
-	    <img class="toutu" src="image/toutu1.jpg">
+	    <image class="toutu" src="image/toutu1.jpg">
+		<div class="box">
+	     <span class="b1"></span>
+		<span class="b2"></span>
+		<span class="b3"></span>
+		<span class="b4"></span>
+		</div></image>
+	    <img class="toutu1" src="image/light.png">
+		
 		<h1>我们的优势</h1>
+		<img class="fgx" src="image/fgx.gif">
+		<p class="banner">OUR <span>ADVANTAGES</span</p>
 		<p>1、资深采编团队，策划能力强，方向把握准。</p>
 		
 		<p>2、传统媒体经历，信息来源广，政治意识强。</p>
@@ -226,11 +341,17 @@ font-size:36px;
 		<p>4、丰富表现手段，懂得用新颖的形式表达内容。</p>
 		<p>5、内容审核严格，专业校对令政务形象零差错。</p>
 		<h2>架构流程</h2>
+		<img class="fgx" src="image/fgx.gif">
+		<p class="banner">PROCESS <span> ARCHITECTURE</span</p>
 		<img class="intro" src="image/res1.png">
 		<h2>方案应用产品</h2>
+		<img class="fgx" src="image/fgx.gif">
+		<p class="banner">RECOMMENDED <span>PRODUCTS</span</p>
 		<img class="s" src="image/prod1.png">
 		
 	    <h2>其他解决方案</h2>
+		<img class="fgx" src="image/fgx.gif">
+		<p class="banner">OTHER <span>SOLUTIONS</span</p>
 		<p class="bottom"><a href="resolution.html">（点击查看更多解决方案）</a></p>
 	
 	 <div class="guide"></div>
@@ -252,6 +373,8 @@ font-size:36px;
 	</div>
 	
 <script>
+    var image_height=$('.toutu').css("height");
+	$('.box').css("height",image_height);
     $('.back').click(function(){
 	     window.location.href="index.html";
 	});
@@ -284,7 +407,7 @@ font-size:36px;
 	   }
 	});
 	$('.menu').click(function(){
-	   
+	  i
 	         if($('.guide-content').css('display')=='block'){
 			 			
 		 $('.guide-content').toggle();
