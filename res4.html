@@ -17,7 +17,8 @@
 	   }
 	   img{
 	       width:100%;
-			  }
+		 
+	   }
 	    .s,.intro{
 	      margin-left:-40px;
 	  }
@@ -36,7 +37,7 @@
 		
 	   }
 	    p span{
-		 color:#8e1315;
+	      color:#8e1315;
 		 font-weight:thicker;
 	    }
 	   h1{
@@ -168,17 +169,14 @@ opacity:0.6;
 
 	background-image:url('image/icon2.gif');
 }
-.font3{
-	
-	
-}
+
 .menu1{
 	position:fixed;
 	top:2.2%;
 	right:2.6%;
 	width:8%;
 	height:3.7%;
-	
+	z-index:8;
 	background-image:url('image/menu.gif');
 	background-size:100% 100%;
 }
@@ -228,10 +226,10 @@ font-size:36px;
 	margin-bottom:80px;
 }
 .toutu1{
-z-index:1;
     position:absolute;
 	top:0px;
 	width:100%;
+	z-index:1;
 	opacity:0;
 	animation:toutu1 1s ease-in 0.5s 1;
 	animation-fill-mode:forwards;
@@ -329,40 +327,43 @@ div,a,img {
     user-select:none;
 }
 
-
-
-
 	</style>
 </head>
 <body>
     <div id="resolution">
 	    <div class="back"></div>
-	    <image class="toutu" src="image/toutu1.jpg">
-	
+	    <img class="toutu" src="image/toutu3.jpg">
+		
 	     <span class="b1"></span>
 		<span class="b2"></span>
 		<span class="b3"></span>
 		<span class="b4"></span>
-	
+		
 	    <img class="toutu1" src="image/light.png">
 		
 		<h1>我们的优势</h1>
 		<img class="fgx" src="image/fgx.gif">
 		<p class="banner">OUR <span>ADVANTAGES</span</p>
-		<p>1、资深采编团队，策划能力强，方向把握准。</p>
+		<p><span>1、数据来源安全可靠</span></p>
 		
-		<p>2、传统媒体经历，信息来源广，政治意识强。</p>
-		<p>3、大量实操经验，五年打磨，为各级政府服务。</p>
-		<p>4、丰富表现手段，懂得用新颖的形式表达内容。</p>
-		<p>5、内容审核严格，专业校对令政务形象零差错。</p>
+		<p>权威的移动端全平台内容大数据提供基础支持。</p>
+		<p><span>2、重大事件定向追踪</span></p>
+		<p>可独立设定追踪目标，重大事件可进行实时监测。</p>
+
+		<p><span>3、权威报告按需定制</span></p>
+		<p>多领域专家智囊，根据您的需求定制舆情报告。</p>
+		
+		<p><span>4、多种功能灵活组合</span></p>
+		<p>榜单排名、竞品追踪、报告定制等选你所需。</p>
+		
 		<h2 class="title2">架构流程</h2>
 		<img class="fgx" src="image/fgx.gif">
 		<p class="banner">PROCESS <span> ARCHITECTURE</span</p>
-		<img class="intro" src="image/res1.png">
+		<img class="intro" src="image/res4.jpg">
 		<h2>方案应用产品</h2>
 		<img class="fgx" src="image/fgx.gif">
 		<p class="banner">RECOMMENDED <span>PRODUCTS</span</p>
-		<img class="s" src="image/prod1.png">
+		<img class="s" src="image/prod4.png">
 		
 	    <h2>其他解决方案</h2>
 		<img class="fgx" src="image/fgx.gif">
@@ -377,7 +378,7 @@ div,a,img {
 	    <div class="guide-content">
 		    <ul>
 			  <li> <div class="icon icon0"> </div> <span class="font font0">首页    </span></li>
-			    <li > <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
+			    <li> <div class="icon icon1"> </div> <span class="font font1">关于我们   </span></li>
 			    <li class="forli"> <div class="icon icon2"> </div> <span class="font font2">解决方案   </span></li>
 			    <li> <div class="icon icon3"> </div> <span class="font font3">政新产品</span></li>
 			    <li> <div class="icon icon4"> </div> <span class="font font4">联系我们   </span></li>
@@ -388,7 +389,7 @@ div,a,img {
 	</div>
 	
 <script>
-     var height=$(window).height();//记录下当前手机视窗可见区域的高度；
+      var height=$(window).height();//记录下当前手机视窗可见区域的高度；
     $('.toutu').css("height",0.362*height);
     $('.toutu1').css("height",0.362*height);
    
@@ -424,7 +425,7 @@ div,a,img {
 	   }
 	});
 	$('.menu').click(function(){
-	  
+	 
 	         if($('.guide-content').css('display')=='block'){
 			 			
 		 $('.guide-content').toggle();
